@@ -29,6 +29,7 @@
         pip install torch==2.7.1 torchvision==0.22.1 torchaudio==2.7.1 --index-url https://download.pytorch.org/whl/cu128
         pip install pandas==2.3.0 requests numpy==2.3.3 torch-geometric scikit-learn==1.7.0
 2.檔案說明
+
 資料集為玉山內部資料，故不提供
 - Preprocess 資料夾中 data_preprocess.py
   - 資料前處理，建立節點特徵、邊索引，切分訓練、驗證及測試遮蔽，特徵資料標準化，並包裝成圖神經網路所需的資料格式
