@@ -5,10 +5,10 @@ from data_preprocess import *
 from modeling import *
 
 if __name__ == '__main__':
-    acct_transaction = pd.read_csv('/mnt/d/AI CUP/DATA/初賽資料/acct_transaction.csv')
-    acct_alert = pd.read_csv('/mnt/d/AI CUP/DATA/初賽資料/acct_alert.csv')
-    acct_test = pd.read_csv('/mnt/d/AI CUP/DATA/初賽資料/acct_predict.csv')
-    currencies_rate = pd.read_pickle('/mnt/d/AI CUP/Upload/currency_rate.pkl')
+    acct_transaction = pd.read_csv('/mnt/d/AI CUP/acct_transaction.csv')
+    acct_alert = pd.read_csv('/mnt/d/AI CUP/acct_alert.csv')
+    acct_test = pd.read_csv('/mnt/d/AI CUP/acct_predict.csv')
+    currencies_rate = pd.read_pickle('/mnt/d/AI CUP/currency_rate.pkl')
     save_path = '/mnt/d/AI CUP/Upload/'
     file_name = 'final_predict.csv'
     acct_transaction = mapping_currencies(acct_transaction, currencies_rate)

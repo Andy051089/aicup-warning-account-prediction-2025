@@ -1,7 +1,7 @@
 import pandas as pd
 import requests
 
-acct_transaction = pd.read_csv('/mnt/d/AI CUP/DATA/初賽資料/acct_transaction.csv')
+acct_transaction = pd.read_csv('/mnt/d/AI CUP/acct_transaction.csv')
 currency_list = acct_transaction['currency_type'].unique().tolist()
 # 下載之匯率為各貨幣對美金匯率
 response = requests.get('https://tw.rter.info/capi.php')

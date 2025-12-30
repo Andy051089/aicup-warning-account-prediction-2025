@@ -4,10 +4,10 @@ os.chdir('/mnt/d/AI CUP/Upload/')
 from modeling import *
 
 if __name__ == '__main__':
-    data_path = '/mnt/d/AI CUP/Upload/preprocess data.pt'
-    predict_path = '/mnt/d/AI CUP/DATA/初賽資料/acct_predict.csv'
-    model_path = '/mnt/d/AI CUP/Upload/final model.pt'
-    save_path = '/mnt/d/AI CUP/Upload/'
+    data_path = '/mnt/d/AI CUP/preprocess data.pt'
+    predict_path = '/mnt/d/AI CUP/acct_predict.csv'
+    model_path = '/mnt/d/AI CUP/final model.pt'
+    save_path = '/mnt/d/AI CUP/'
     file_name = 'final_predict.csv'
     data, accounts, y, acct_test = load_data(data_path, predict_path)
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
