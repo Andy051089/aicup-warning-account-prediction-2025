@@ -1,6 +1,9 @@
 #   AI CUP 2025 玉山人工智慧公開挑戰賽－警示帳戶預測
 ##  名次
 - 初、複賽皆為第一名
+##  簡述
+-   利用真實銀行交易資料，透過歸戶行資料整理並建立變數，使用圖神經網路及Positive Unlabeled Learning概念建立預測模型。並於複賽透過雲端平台 Amazon Sagemaker AI 在 90 分鐘內加入新資料及變數重新訓練模型並進行預測
+-   Leveraging GNNs and Positive-Unlabeled Learning to build predictive models from real-world bank transactions. Incorporated new variables and external data via Amazon SageMaker AI to retrain and redeploy models within a 90-minute timeframe during the competition finals.
 ##  主要功能
 - 讀取交易流水帳資料、警示帳戶資料、待預測帳戶資料
 - 資料前處理，每個帳戶進行歸戶建立特徵，並且建立後續使用之模型所需項目
