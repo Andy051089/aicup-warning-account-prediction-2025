@@ -1,9 +1,17 @@
 #   AI CUP 2025 玉山人工智慧公開挑戰賽－警示帳戶預測
 ##  名次
-- 初、複賽皆為第一名
+- 初賽、複賽皆為第一名 (共 790 支隊伍 1092 位選手參賽)
 ##  簡述
--   利用真實銀行超過 400 萬筆交易資料，透過歸戶行資料整理並建立變數，使用圖神經網路及 Positive Unlabeled Learning 概念建立預測模型。並於複賽透過雲端平台 Amazon Sagemaker AI 在 90 分鐘內加入新資料及變數重新訓練模型並進行預測
--   Leveraging GNNs and Positive-Unlabeled Learning to build predictive models based on over 4 million real-world bank transactions. Incorporated new variables and external data via Amazon SageMaker AI to retrain and redeploy models within a 90-minute timeframe during the competition finals.
+- 利用真實銀行超過 400 萬筆交易資料，透過歸戶行資料整理並建立變數，使用圖神經網路及 Positive Unlabeled Learning 概念建立預測模型，解決樣本間關係資料、不確定且極端不平衡標籤問題。並於複賽透過雲端平台 Amazon Sagemaker AI 在 90 分鐘內加入新資料及變數重新訓練模型並進行預測
+##  相似技術可應用於醫療處
+- Positive Unlabeled Learning 概念適用解決醫療領域
+  - 罕見疾病問題
+  - 因時間、人力、金錢標註成本高，所導致的資料無法完整標籤，混雜標籤問題
+- 圖神經網路 (GNN)
+  - 多模態資料整合，做為特徵融合方法
+  - 同間病房或同個疾病或同位醫師之病人可能有相似的關係網絡圖資訊在其中
+  - 不同間病房或不同醫師之病人可能有異構圖關係網資訊在其中
+- 基因序列、藥物等 AI 研究
 ##  主要功能
 - 讀取交易流水帳資料、警示帳戶資料、待預測帳戶資料
 - 資料前處理，每個帳戶進行歸戶建立特徵，並且建立後續使用之模型所需項目
@@ -97,3 +105,13 @@
 - find_best_threshold(): 使用驗證集尋找最佳閾值的 F1 Score
 - evaluate_model(): 評估模型，使用最佳閾值對訓練集、驗證集及測試集進行預測並計算 F1 Score
 - save_prediction(): 儲存預測結果
+##  結果
+![Threshold](images/Threshold.png)
+- 可以從圖中看到，不平衡資料問題通過調整閾值，F1_score 可以提高約 17 分
+
+![Multiple Method Performance](images/Multiple%20Method%20Performance.png)
+- 可以從圖中看到無向圖及使用 PU loss，兩者之重要性
+- 當同時加上其他 loss 時可能造成干擾
+##  獎狀
+![Certificate](images/Certificate.png)
+![Certificate_1](images/Certificate_1.png)
