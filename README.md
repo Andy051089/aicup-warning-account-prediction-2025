@@ -107,11 +107,15 @@
 - save_prediction(): 儲存預測結果
 ##  結果
 ![Threshold](images/Threshold.png)
-- 可以從圖中看到，不平衡資料問題通過調整閾值，F1_score 可以提高約 17 分
+
+    可以從上圖中看到，不平衡資料問題通過調整閾值，F1_score 可以提高約 17 分
 
 ![Multiple Method Performance](images/Multiple%20Method%20Performance.png)
-- 可以從圖中看到無向圖及使用 PU loss，兩者之重要性
-- 當同時加上其他 loss 時可能造成干擾
+
+    可以從圖中看到無向圖及使用 PU loss，兩者之重要性
+    
+    當同時加上其他 loss 時可能造成干擾
+
 ##  獎狀
 ![Certificate](images/Certificate.png)
 ![Certificate_1](images/Certificate_1.png)
