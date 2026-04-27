@@ -2,7 +2,8 @@
 ##  名次
 - 初賽、複賽皆為第一名 (共 790 支隊伍 1092 位選手參賽)
 ##  簡述
-- ○	利用銀行超過400萬筆真實交易資料，透過歸戶資料整理並建立變數，使用圖神經網路結合Positive Unlabeled Learning概念建立預測模型，解決樣本間關係資料、不確定且極端不平衡標籤問題，並於複賽透過雲端平台 Amazon Sagemaker AI 在 90 分鐘內加入新資料及變數重新訓練模型並進行預測。
+- 利用銀行超過400萬筆真實交易資料，透過歸戶整理並建立特徵，使用圖神經網路及無向圖，帳戶作為節點及交易行為作為邊連結，結合Positive Unlabeled Learning概念建立預測模型，有效解決交易網絡圖資料型態及Positive Unlabeled標籤問題。使用驗證集AUPRC選擇最終模型，並透過極大化驗證F1-score調整閾值，有效解決資料Positive Unlabeled及不平衡問題。
+- 結果顯示無向圖結合Positive Unlabeled Loss可以比有向圖結合Positive Unlabeled Loss的F1-score相對提升53%，也比無向圖結合Cross entropy loss相對提升25%。通過調整閾值後的F1-score，可以比使用0.5當作分類閾值相對提升42%。透過本研究所選用之技術與方法，可有效達成警示帳戶預測之目標。
 ##  相似技術可應用於醫療處
 - Positive Unlabeled Learning 概念適用解決醫療領域
   - 罕見疾病問題
